@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Grading System</title>
+</head>
+<body>
+
+<script>
+
+    
+    const students = [
+        { name: "Rahim", marks: 85 },
+        { name: "Karim", marks: 72 },
+        { name: "Nila", marks: 58 },
+        { name: "Sadia", marks: 45 },
+        { name: "Rafi", marks: 32 }
+    ];
+
+    
+    const getGrade = (marks) => {
+
+        if (marks >= 80) {
+            return "A+";
+        }
+        else if (marks >= 70) {
+            return "A";
+        }
+        else if (marks >= 60) {
+            return "B";
+        }
+        else if (marks >= 50) {
+            return "C";
+        }
+        else if (marks >= 40) {
+            return "D";
+        }
+        else {
+            return "F";
+        }
+    };
+
+    
+    for (const student of students) {
+
+        const grade = getGrade(student.marks);
+
+        console.log(
+            `Name: ${student.name}, Marks: ${student.marks}, Grade: ${grade}`
+        );
+    }
+
+</script>
+
+</body>
+</html>
